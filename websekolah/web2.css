@@ -1,0 +1,167 @@
+html, body {
+    height: 100%; /* Pastikan html dan body memiliki tinggi 100% */
+    margin: 0; /* Menghilangkan margin default dari body */
+    padding: 0; /* Menghilangkan padding default dari body */
+    display: flex; /* Menggunakan Flexbox untuk layout body */
+    flex-direction: column; /* Menyusun elemen di dalam body secara vertikal */
+}
+
+.navbar {
+    width: 100%; /* Lebar navbar 100% dari lebar layar */
+    position: fixed; /* Navbar akan tetap berada di atas halaman saat scrolling */
+    top: 0; /* Menempatkan navbar di bagian paling atas halaman */
+    left: 0; /* Menempatkan navbar di sebelah kiri halaman */
+    z-index: 1000; /* Z-index tinggi untuk memastikan navbar berada di depan elemen lain */
+    display: flex; /* Menggunakan Flexbox untuk mengatur layout elemen di dalam navbar */
+    justify-content: space-between; /* Memisahkan elemen di dalam navbar agar ada ruang di antara logo, search bar, dan menu */
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah navbar */
+    background-color: cadetblue; /* Memberi warna latar putih pada navbar */
+    padding: 10px 20px; /* Memberikan padding di dalam navbar (10px vertikal dan 20px horizontal) */
+    color: whitesmoke;
+}
+
+.logo {
+    display: flex; /* Mengatur logo dan teks agar sejajar secara horizontal */
+    align-items: center; /* Menyelaraskan logo dan teks secara vertikal di tengah */
+}
+
+.logo img {
+    height: 40px; /* Mengatur tinggi gambar logo menjadi 40px */
+    margin-right: 10px; /* Memberi jarak antara logo dan teks sekolah */
+}
+
+.search-bar {
+    display: flex; /* Menyelaraskan elemen input dan tombol secara horizontal */
+    align-items: center; /* Menyelaraskan elemen input dan tombol secara vertikal di tengah */
+    padding: 10px;
+}
+
+.search-bar input {
+    padding: 5px; /* Memberikan padding di dalam input pencarian */
+    margin-right: 10px; /* Memberi jarak antara input pencarian dan tombol pencarian */
+}
+
+.search-bar button {
+    padding: 5px; /* Memberikan padding di dalam tombol pencarian */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat dihover di atas tombol */
+}
+
+.menu ul {
+    list-style: none; /* Menghilangkan bullet points dari daftar navigasi */
+    margin: 0; /* Menghilangkan margin default dari daftar navigasi */
+    padding: 0; /* Menghilangkan padding default dari daftar navigasi */
+    padding-right: 50px; /* Menambahkan padding di sebelah kanan untuk jarak dari ujung layar */
+    display: flex; /* Mengatur daftar navigasi secara horizontal dengan Flexbox */
+}
+
+.menu ul li {
+    margin-left: 20px; /* Memberi jarak antar item di dalam daftar navigasi */
+}
+
+.menu ul li a {
+    text-decoration: none; /* Menghilangkan garis bawah default dari tautan */
+    padding: 10px 15px; /* Memberikan padding di dalam item navigasi (10px vertikal, 15px horizontal) */
+    background-color: whitesmoke; /* Memberikan warna latar biru pada item navigasi */
+    color: steelblue; /* Memberikan warna teks putih pada item navigasi */
+    border-radius: 5px; /* Membuat sudut dari item navigasi menjadi melengkung */
+}
+
+.menu ul li a:hover {
+    background-color: silver; /* Mengubah warna latar item navigasi menjadi lebih gelap saat dihover */
+}
+
+/* Menambahkan jarak antara konten dan navbar yang fixed */
+
+/* Style untuk bagian konten utama */
+.main-content {
+    display: flex; /* Menggunakan Flexbox untuk menyusun elemen di dalam main-content */
+    flex: 1; /* Membuat div main-content mengisi ruang sisa di body */
+    padding: 20px; /* Memberikan padding di dalam div main-content */
+    background-color: #f4f4f4; /* Memberikan warna latar belakang abu-abu muda pada bagian konten utama */
+    box-sizing: border-box; /* Menjamin padding dan border dihitung dalam lebar dan tinggi elemen */
+}
+
+.content {
+    margin-top: 80px;
+    margin-right: 20px;
+    flex: 3; /* Membuat div konten utama lebih lebar dibandingkan sidebar */
+    background-color: white; /* Memberikan warna latar putih pada div konten utama */
+    padding: 20px; /* Memberikan padding di dalam div konten utama */
+    border-radius: 8px; /* Membuat sudut div konten utama melengkung */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Memberikan bayangan lembut pada div konten utama */
+    box-sizing: border-box; /* Menjamin padding dan border dihitung dalam lebar dan tinggi elemen */
+}
+
+
+.school-info {
+    margin-top: 20px; /* Memberikan jarak antara judul dan informasi sekolah */
+}
+
+.info-row {
+    margin-bottom: 10px; /* Memberikan jarak antara baris informasi */
+    display: flex; /* Menggunakan Flexbox untuk menyusun elemen dalam satu baris */
+    justify-content: space-between; /* Memastikan elemen di dalam baris tersusun dengan jarak di antara mereka */
+    margin-bottom: 10px; /* Menambahkan jarak bawah antar baris informasi */
+
+}
+
+.info-row strong {
+    display: block; /* Membuat label informasi menjadi elemen block agar tampil di baris terpisah */
+    font-weight: bold; /* Menebalkan teks label */
+    flex: 1; /* Menyediakan ruang yang cukup untuk label */
+    font-weight: bold; /* Menebalkan teks pada label */
+}
+
+.info-row span {
+    display: block; /* Membuat nilai informasi menjadi elemen block agar tampil di baris terpisah */
+    flex: 5; /* Menyediakan ruang yang lebih untuk nilai */
+    text-align: left; /* Menyelaraskan teks di kiri (bisa diubah jika diinginkan) */
+}
+
+.sidebar {
+    margin-top: 80px;
+    flex: 1; /* Membuat div sidebar lebih sempit dibandingkan konten utama */
+    background-color: white; /* Memberikan warna latar putih pada div sidebar */
+    padding: 20px; /* Memberikan padding di dalam div sidebar */
+    border-radius: 8px; /* Membuat sudut div sidebar melengkung */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Memberikan bayangan lembut pada div sidebar */
+    box-sizing: border-box; /* Menjamin padding dan border dihitung dalam lebar dan tinggi elemen */
+}
+
+.sidebar h3 {
+    margin-top: 0; /* Menghilangkan margin atas dari judul sidebar */
+}
+
+.sidebar ul {
+    list-style: none; /* Menghilangkan bullet points dari daftar berita */
+    padding: 0; /* Menghilangkan padding default dari daftar berita */
+}
+
+.sidebar ul li {
+    margin-bottom: 10px; /* Memberikan jarak antara item berita */
+}
+
+.sidebar ul li a {
+    text-decoration: none; /* Menghilangkan garis bawah default dari tautan berita */
+    color: #007BFF; /* Memberikan warna biru pada tautan berita */
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline; /* Menambahkan garis bawah pada tautan berita saat dihover */
+}
+
+/* Style untuk bagian footer */
+
+.footer {
+    width: 100%; /* Lebar footer 100% dari lebar layar */
+    background-color: cadetblue; /* Memberikan warna latar gelap pada footer */
+    color: white; /* Memberikan warna teks putih pada footer */
+    text-align: center; /* Menyelaraskan teks di tengah footer */
+    padding: 20px 0; /* Memberikan padding vertikal di dalam footer */
+    position: relative; /* Memastikan footer berada di bawah konten */
+    margin-top: auto; /* Memastikan footer selalu berada di bawah konten utama */
+}
+
+.footer p {
+    margin: 0; /* Menghilangkan margin default dari paragraf di dalam footer */
+}
